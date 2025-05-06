@@ -103,7 +103,7 @@ const TaskList = () => {
             >
               Back to Project
             </Link>
-            {user && project && user.id === project.owner_id && (
+            {user && project && user.id === project.user_id && (
             <Link
               to={`/projects/${projectId}/tasks/create`}
               className="btn btn-primary"
@@ -163,7 +163,7 @@ const TaskList = () => {
                         View
                       </Link>
 
-                      {user && project && user.id === project.owner_id && (
+                      {user && project && user.id === project.user_id && (
                         <>
                           <Link
                             to={`/tasks/${task.id}/edit`}
